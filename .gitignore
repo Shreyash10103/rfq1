@@ -1,0 +1,4 @@
+/node_modules
+
+# Ignore config.env file inside the data directory
+/data/config.env
