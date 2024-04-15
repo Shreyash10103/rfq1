@@ -11,9 +11,7 @@ const schema = new mongoose.Schema({
   },
   email: {
     type: String,
-    unique: true,
     required: true,
-
   },
   product: {
     type: String,
@@ -21,23 +19,20 @@ const schema = new mongoose.Schema({
   },
   thickness: {
     type: String,
-
   },
   grade: {
-    type: String,
-
-  },
-  SendAt: {
-    type: Date,
-    default: Date.now,
-    required: true,
-
-  },
-  grade: {
-    type: String,
+    type: [String],
   },
   qnt: {
     type: String,
   },
-})
+
+  SendAt: {
+    type: Date,
+    default: Date.now,
+    required: true,
+  }
+
+});
+
 export const Rfq = mongoose.model("Rfq", schema);
